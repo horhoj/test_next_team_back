@@ -1,0 +1,28 @@
+{
+  "name": "xxx",
+  "version": "0.1.0",
+  "private": true,
+  "module": "commonjs",
+  "dependencies": {
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "dev": "nodemon ./src/index.ts",
+    "lint": "eslint ./src --ext .js,.ts,.tsx,.jsx  --fix",
+    "format": "prettier --write \"./src/**/**.{ts,tsx,js,jsx,json}\""
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "tsc": "^2.0.4"
+  }
+}
