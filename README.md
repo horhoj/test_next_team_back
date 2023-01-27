@@ -1,8 +1,8 @@
-react+typescript+redux-toolkit
+backend для тестового задания
 
 запуск 
 
 yarn
 
-yarn start
+yarn dev
 
