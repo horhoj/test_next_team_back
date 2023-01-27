@@ -19,3 +19,19 @@ export const validateMiddleware =
       return res.status(400).json(err?.errors);
     }
   };
+
+export const jsonValidateMiddleware = (
+  err: unknown,
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
+  if (
+    err instanceof SyntaxError &&
+    (err as any)?.status === 400 &&
+    'body' in err
+  ) {
+    return res.status(400).send({ status: 400, message: err.message });
+  }
+  next();
+};

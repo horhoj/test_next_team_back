@@ -13,7 +13,7 @@ export const getMessageList = async () => {
   return Promise.resolve(messageList);
 };
 
-export const addNewMessage = (data: Omit<MessageBoardItem, 'id'>) => {
+export const addNewMessage = async (data: Omit<MessageBoardItem, 'id'>) => {
   const newMessage: MessageBoardItem = {
     ...data,
     id: getUUID(),
